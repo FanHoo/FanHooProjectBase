@@ -1,4 +1,4 @@
-package fanhoo.com.fanhoosimple.base;
+package fanhoo.com.projectbase.base;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
-import fanhoo.com.fanhoosimple.utils.ToastUtils;
+import fanhoo.com.projectbase.utils.ToastUtils;
 
 
 /**

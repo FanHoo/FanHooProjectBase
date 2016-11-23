@@ -1,4 +1,4 @@
-package fanhoo.com.fanhoosimple.utils;
+package fanhoo.com.projectbase.utils;
 
 import android.content.Context;
 import android.widget.Toast;

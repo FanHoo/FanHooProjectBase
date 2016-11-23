@@ -1,4 +1,4 @@
-package fanhoo.com.fanhoosimple.base;
+package fanhoo.com.projectbase.base;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import java.io.Serializable;
 import java.util.Stack;
 
 import butterknife.ButterKnife;
-import fanhoo.com.fanhoosimple.R;
-import fanhoo.com.fanhoosimple.utils.ToastUtils;
+import fanhoo.com.projectbase.R;
+import fanhoo.com.projectbase.utils.ToastUtils;
 
 /**
  * 创建人 胡焕
@@ -39,8 +39,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.setContentView(layoutResID);
         ButterKnife.bind(this);
     }
-
-
 
 
     /**

@@ -1,12 +1,12 @@
-package fanhoo.com.fanhoosimple;
+package fanhoo.com.projectbase;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import butterknife.BindView;
-import fanhoo.com.fanhoosimple.base.BaseActivity;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends Activity {
 
     @BindView(R.id.textview)
     TextView textView;

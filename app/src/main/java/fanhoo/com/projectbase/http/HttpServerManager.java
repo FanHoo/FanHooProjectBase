@@ -1,8 +1,8 @@
-package fanhoo.com.fanhoosimple.http;
+package fanhoo.com.projectbase.http;
 
 import java.io.IOException;
 
-import fanhoo.com.fanhoosimple.base.Constants;
+import fanhoo.com.projectbase.base.Constants;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

@@ -1,4 +1,4 @@
-package fanhoo.com.fanhoosimple.http;
+package fanhoo.com.projectbase.http;
 
 /**
  * 创建人 胡焕
