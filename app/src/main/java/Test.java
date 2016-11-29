@@ -1,5 +1,7 @@
+import android.text.TextUtils;
+
+import com.fanhoo.lib.utils.annotations.BindNoticeProcess;
 import fanhoo.com.projectbase.Man;
-import fanhoo.com.projectbase.utils.annotations.BindNoticeProcess;
 
 /**
  * 创建人 胡焕
@@ -11,8 +13,9 @@ public class Test {
     public static void main(String[] args) {
         BindNoticeProcess process = BindNoticeProcess.getInstance();
         try {
-            String not = process.getNotice(new Man());
-            System.out.print(not);
+            String notice = process.getNotice(new Man());
+            if (!TextUtils.isEmpty(notice))
+                System.out.print(notice);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }

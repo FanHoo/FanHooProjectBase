@@ -1,6 +1,7 @@
 package fanhoo.com.projectbase;
 
-import fanhoo.com.projectbase.utils.annotations.BindNotice;
+
+import com.fanhoo.lib.utils.annotations.BindNotice;
 
 /**
  * 创建人 胡焕
@@ -9,9 +10,10 @@ import fanhoo.com.projectbase.utils.annotations.BindNotice;
  */
 
 public class Man {
-    public String Name = "HH";
     public int age = 0;
+    @BindNotice(title = "性别")
+    public String Sex = "man";
 
     @BindNotice(title = "姓名")
-    public String Sss;
+    public String Name;
 }

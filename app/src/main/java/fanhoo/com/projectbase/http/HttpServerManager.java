@@ -32,7 +32,7 @@ public class HttpServerManager {
     private HttpServerManager() {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        client = new OkHttpClient.Builder().addInterceptor(interceptor).addInterceptor(new Interceptor() {
+        client = new OkHttpClient.Builder().addInterceptor(interceptor).addNetworkInterceptor(new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 String token = "";  //这里自行获取token,一般在登录成功后获取到token进行保存

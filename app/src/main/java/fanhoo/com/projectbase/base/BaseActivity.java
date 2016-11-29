@@ -7,12 +7,13 @@ import android.support.annotation.LayoutRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
+import com.fanhoo.lib.utils.ToastUtil;
+
 import java.io.Serializable;
 import java.util.Stack;
 
 import butterknife.ButterKnife;
 import fanhoo.com.projectbase.R;
-import fanhoo.com.projectbase.utils.ToastUtils;
 
 /**
  * 创建人 胡焕
@@ -32,17 +33,20 @@ public abstract class BaseActivity extends AppCompatActivity {
             requestWindowFeature(Window.FEATURE_NO_TITLE);
         mActivityStack.add(this);
         TAG = this.getClass().getSimpleName();
+
     }
+
 
     @Override
     public void setContentView(@LayoutRes int layoutResID) {
         super.setContentView(layoutResID);
         ButterKnife.bind(this);
+        init();
     }
 
 
     /**
-     * 子类重写此方法进行初始化操作
+     * 为保持基本一致性,子类重写此方法进行初始化操作.
      *
      * @author 胡焕
      * @date 2016/11/23 09:33
@@ -149,7 +153,9 @@ public abstract class BaseActivity extends AppCompatActivity {
      * @author 胡焕
      * @date 2016/11/22 16:04
      */
-    public final void showToast(String msg) {
-        ToastUtils.showToast(msg, this);
+    protected final void showToast(String msg) {
+        ToastUtil.showToast(msg, this);
     }
+
+
 }

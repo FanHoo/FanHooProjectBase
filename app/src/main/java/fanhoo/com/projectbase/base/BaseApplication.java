@@ -1,8 +1,9 @@
 package fanhoo.com.projectbase.base;
 
 import android.app.Application;
+import android.content.Context;
 
-import fanhoo.com.projectbase.image.ImageLoader;
+import fanhoo.com.projectbase.image.ImageLoaderManager;
 
 /**
  * 创建人 胡焕
@@ -11,13 +12,20 @@ import fanhoo.com.projectbase.image.ImageLoader;
  */
 
 public class BaseApplication extends Application {
+    private static Context app;
 
 
     @Override
     public void onCreate() {
         super.onCreate();
-        ImageLoader.initImageLoader(this);
+        app = this;
+        ImageLoaderManager.initImageLoader(this);
+
     }
 
+
+    public static Context getContext() {
+        return app;
+    }
 
 }

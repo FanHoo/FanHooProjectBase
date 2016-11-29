@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.ButterKnife;
-import fanhoo.com.projectbase.utils.ToastUtils;
+import com.fanhoo.lib.utils.ToastUtil;
 
 
 /**
@@ -72,6 +72,6 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void init(View view, Bundle savedInstanceState);
 
     protected void showToast(String msg) {
-        ToastUtils.showToast(msg, mContext);
+        ToastUtil.showToast(msg, mContext);
     }
 }
