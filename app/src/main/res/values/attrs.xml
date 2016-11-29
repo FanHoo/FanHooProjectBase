@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeLayout">
+        <attr name="swipe_type" format="enum">
+            <!--向右滑动-->
+            <enum name="swipe_right" value="2" />
+            <!--向左滑动-->
+            <enum name="swipe_left" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>
