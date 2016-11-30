@@ -7,7 +7,7 @@ import android.os.Build;
 import android.os.SystemClock;
 import android.provider.Settings;
 
-import com.fanhoo.lib.utils.io.FileUtils;
+import com.fanhoo.lib.utils.file.FileUtil;
 import com.fanhoo.lib.utils.log.Log;
 
 import java.io.File;
@@ -56,12 +56,12 @@ public class AndroidUtil {
      */
     public static String getEthernetMacAddress() {
         try {
-            String mac = FileUtils.readFileToString(new File(ETH0_MAC_ADDRESS));
+            String mac = FileUtil.readFileToString(new File(ETH0_MAC_ADDRESS));
             if (Log.isPrint) {
                 Log.i(TAG, "Ethernet MAC：" + mac);
             }
             return mac;
-        } catch (IOException e) {
+        } catch (Exception e) {
             Log.e(TAG, "IO Exception when getting eth0 mac address", e);
             e.printStackTrace();
             return "unknown";
