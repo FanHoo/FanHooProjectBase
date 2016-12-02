@@ -70,7 +70,7 @@ public final class FileUtil {
      * @author 胡焕
      * @date 2016/11/30 13:37
      */
-    public static boolean makeFile(File file, boolean isDir) {
+    public static boolean createFile(File file, boolean isDir) {
         try {
             if (isDir) {
                 if (!file.exists()) {
@@ -102,7 +102,7 @@ public final class FileUtil {
         boolean result = false;
         FileOutputStream fileOutputStream = null;
         try {
-            makeFile(target, false);
+            createFile(target, false);
             fileOutputStream = new FileOutputStream(target, append);
             byte[] bytes = str.getBytes("utf-8");
             fileOutputStream.write(bytes);
@@ -322,7 +322,7 @@ public final class FileUtil {
             if (file.isFile()) {
                 file.createNewFile();
             }
-            makeFile(file, zipEntry.isDirectory());
+            createFile(file, zipEntry.isDirectory());
             bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(file));
             byte[] buffer = new byte[1024];
             int length;
